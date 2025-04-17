@@ -1,58 +1,47 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>معرض الصور - Leader Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    h1 {
-      background-color: #004d7a;
-      color: white;
-      padding: 1rem;
-      margin: 0;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 1rem;
-    }
-    .gallery img {
-      margin: 10px;
-      width: 250px;
-      height: auto;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: transform 0.2s;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
+    body { font-family: 'Cairo', sans-serif; }
   </style>
 </head>
-   <nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#about">من نحن</a>
-    <a href="#courses">الدورات</a>
-    <a href="#books">الكتب</a>
-    <a href="gallery.html">معرض الصور</a>
-    <a href="#testimonials">آراء</a>
-    <a href="#contact">اتصل بنا</a>
-  </nav>
-<body>
-  <h1>📸 معرض صور دورات Leader Academy</h1>
-  <div class="gallery">
-    <img src="gallery_photos/1.jpg" alt="صورة من الدورة 1">
-    <img src="gallery_photos/2.jpg" alt="صورة من الدورة 2">
-   
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-[#2C2F7C] text-white py-6 text-center shadow">
+    <h1 class="text-3xl font-bold">📸 معرض صور دورات Leader Academy</h1>
+    <p class="mt-2 text-sm">لقطات من الدورات والأنشطة التكوينية</p>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="py-10 px-4 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <img src="gallery_photos/1.jpg" alt="دورة 1" class="rounded-lg shadow hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox(this.src)">
+      <img src="gallery_photos/2.jpg" alt="دورة 2" class="rounded-lg shadow hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox(this.src)">
+      <img src="gallery_photos/3.jpg" alt="دورة 3" class="rounded-lg shadow hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox(this.src)">
+      <img src="gallery_photos/4.jpg" alt="دورة 4" class="rounded-lg shadow hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox(this.src)">
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+    <img id="lightbox-img" src="" class="max-w-3xl max-h-[90vh] rounded shadow-lg">
+    <button onclick="closeLightbox()" class="absolute top-6 left-6 text-white text-3xl">&times;</button>
   </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.remove('hidden');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+    }
+  </script>
+
 </body>
 </html>
