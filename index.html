@@ -1,119 +1,88 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leader Academy Tunisia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #004d7a;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav {
-      background: #007B9E;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      padding: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      background: #e0f7fa;
-      text-align: center;
-      padding: 2rem;
-    }
-    .hero h1 {
-      color: #004d7a;
-    }
-    .section {
-      padding: 2rem;
-      background: white;
-      margin: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .cta {
-      background: #007B9E;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
-    .cta a {
-      background: white;
-      color: #007B9E;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
+    body { font-family: 'Cairo', sans-serif; }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Leader Academy Tunisia</h1>
-    <p>اصنع لك إرادة، نصنع لك فرصة</p>
-  </header>
+<body class="bg-white text-gray-800">
 
-  <nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#about">من نحن</a>
-    <a href="#courses">الدورات</a>
-    <a href="#books">الكتب</a>
-    <a href="gallery.html">معرض الصور</a>
-    <a href="#testimonials">آراء</a>
-    <a href="#contact">اتصل بنا</a>
+  <!-- Navbar -->
+  <nav class="bg-[#2C2F7C] text-white py-4 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-xl font-bold">Leader Academy</h1>
+      <ul class="flex space-x-4 space-x-reverse">
+        <li><a href="#about" class="hover:text-yellow-300">من نحن</a></li>
+        <li><a href="#courses" class="hover:text-yellow-300">الدورات</a></li>
+        <li><a href="#books" class="hover:text-yellow-300">الكتب</a></li>
+        <li><a href="gallery.html" class="hover:text-yellow-300">معرض الصور</a></li>
+        <li><a href="#contact" class="hover:text-yellow-300">تواصل معنا</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <div class="hero" id="home">
-    <h1>برامج تكوينية حديثة وشهادات معتمدة</h1>
-    <p>خبرة منذ 2016 في تكوين المدرسين والمربين في تونس</p>
-  </div>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-[#2C2F7C] to-[#6658A5] text-white text-center py-16 px-4">
+    <h2 class="text-4xl font-bold mb-4">اصنع لك إرادة، نصنع لك فرصة</h2>
+    <p class="text-lg mb-6">برامج تكوينية متطورة لتأهيل المدرسين والمربين في تونس</p>
+    <a href="#courses" class="bg-yellow-400 text-black py-2 px-6 rounded-full font-semibold hover:bg-yellow-300">اكتشف الدورات</a>
+  </section>
 
-  <div class="section" id="about">
-    <h2>من نحن</h2>
-    <p>Leader Academy مؤسسة تكوينية تهدف لتأهيل المدرسين والمربين وتطوير مهاراتهم بأساليب حديثة.</p>
-  </div>
+  <!-- About Us -->
+  <section id="about" class="py-12 px-6 max-w-5xl mx-auto">
+    <h3 class="text-2xl font-bold text-center mb-6">من نحن</h3>
+    <p class="text-center text-gray-600 leading-loose">
+      Leader Academy Tunisia هي مؤسسة رائدة في مجال التكوين التربوي منذ 2016. نُؤمن بأن التعليم هو حجر الأساس لبناء مجتمع متوازن ومُبدع. نقدم برامج تأهيلية للمدرسين من مختلف المستويات، بإشراف خبراء ومختصين في المجال.
+    </p>
+  </section>
 
-  <div class="section" id="courses">
-    <h2>الدورات المتوفرة</h2>
-    <ul>
-      <li>تأهيل المدرّسين</li>
-      <li>إعداد المعلّم الرقمي</li>
-      <li>إعداد مدرّسي الفرنسية والإنجليزية</li>
-      <li>مرافقة التلاميذ ذوي صعوبات التعلم</li>
-      <li>التحضيري ومناظرة التفقد</li>
-    </ul>
-  </div>
+  <!-- Courses Section -->
+  <section id="courses" class="bg-gray-100 py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-2xl font-bold text-center mb-10">الدورات المتوفرة</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow p-4">
+          <h4 class="text-lg font-semibold mb-2">إعداد المعلّم الرقمي</h4>
+          <p class="text-sm text-gray-600">أساليب وتقنيات التعليم الرقمي وتوظيف الأدوات الرقمية.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4">
+          <h4 class="text-lg font-semibold mb-2">تأهيل مدرّسي الفرنسية</h4>
+          <p class="text-sm text-gray-600">مناهج تدريس اللغة الفرنسية في مختلف المراحل التعليمية.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4">
+          <h4 class="text-lg font-semibold mb-2">مرافقة ذوي صعوبات التعلّم</h4>
+          <p class="text-sm text-gray-600">آليات تشخيص ومرافقة التلاميذ ذوي الاحتياجات الخاصة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="section" id="books">
-    <h2>الكتب التربوية</h2>
-    <p>اكتشف كتبنا المرجعية مثل "تخطيط التعلّمات" و"صعوبات التعلم" المتوفرة بمقر الأكاديمية.</p>
-  </div>
+  <!-- Books Section -->
+  <section id="books" class="py-12 px-6 max-w-5xl mx-auto">
+    <h3 class="text-2xl font-bold text-center mb-6">سلسلة الكتب التربوية</h3>
+    <p class="text-center text-gray-600 mb-4">كتب مرجعية أعدّها الأستاذ سامي الجباري لتمكين المدرسين نظريًا وتطبيقيًا.</p>
+    <div class="text-center">
+      <img src="book.jpg" alt="كتاب تربوي" class="mx-auto w-64 rounded-lg shadow"/>
+      <p class="mt-2 text-sm text-gray-700">السعر: 27 د.ت | ☎ 24249926</p>
+    </div>
+  </section>
 
-  <div class="section" id="testimonials">
-    <h2>آراء المشاركين</h2>
-    <p>"دورات ممتازة، فريق محترف ومحتوى متميز!"</p>
-  </div>
+  <!-- Contact Section -->
+  <section id="contact" class="bg-[#2C2F7C] text-white py-12 px-6 text-center">
+    <h3 class="text-2xl font-bold mb-4">📩 تواصل معنا</h3>
+    <p class="mb-4">للتسجيل أو الاستفسار حول البرامج، الرجاء تعبئة النموذج أو الاتصال على الرقم:</p>
+    <p class="font-semibold text-yellow-300 text-xl mb-6">24249926</p>
+    <a href="https://forms.gle/UrevdLYd35DPavm59" target="_blank" class="bg-yellow-400 text-black py-2 px-6 rounded-full font-semibold hover:bg-yellow-300">افتح استمارة التسجيل</a>
+  </section>
 
-  <div class="section" id="contact">
-    <h2>📩 تواصل معنا</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfK0aoHeRHtR3Bvs4oZZqpE5l5rwPuWJrR-RO4sLVKvspKtog/viewform?usp=dialog"
-            width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">جارٍ التحميل…</iframe>
-  </div>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>&copy; 2025 Leader Academy Tunisia. جميع الحقوق محفوظة.</p>
+  </footer>
+
 </body>
 </html>
